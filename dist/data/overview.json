@@ -24,7 +24,7 @@
         },
         {
             "type": "paid",
-            "name": "Simpl",
+            "name": "You Paid Simpl",
             "time": "Jun 10, 01:30 PM",
             "amount": "180"
         },
@@ -36,7 +36,7 @@
         },
         {
             "type": "bill",
-            "amount": 560,
+            "name": "Bill Generated | 560",
             "fromt": "1st June 2018",
             "to": "15th June 2018",
             "due": "27th June 2018"
@@ -90,12 +90,11 @@
         }
     ],
     "faq": [
-        { "q": "How does Simpl work", "a": "It is very Simple" },
+        { "q": "How does Simpl work ?", "a": "It is very Simple" },
         {
-            "q": "How is my Spending limit determined",
+            "q": "How is my Spending limit determined ?",
             "a": "Based on your credit score"
         },
-        { "q": "How does Simpl’s billing cycle works?", "a": "Not Sure" },
-        { "q": "See all questions", "a": "" }
+        { "q": "How does Simpl’s billing cycle works ?", "a": "Not Sure" }
     ]
 }

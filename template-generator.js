@@ -6,8 +6,7 @@ glob('./src/**/*template.html', function(er, files) {
 
     for (const file of files) {
         fs.readFile(file, 'utf8', (err, data) => {
-            let content =
-                'export function view(data) { return `' + data + '`};';
+            let content = 'export function view(data, views) { return `' + data + '`};';
             fs.writeFile(file.split('.html')[0] + '.js', content, err => {
                 if (err) {
                     return console.log(err);

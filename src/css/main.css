@@ -21,6 +21,9 @@ html body header {
   padding: 0 24px;
   display: flex;
   flex-direction: column;
+  max-width: 1070px;
+  margin-left: auto;
+  margin-right: auto;
 }
 html body header .simpl {
   display: flex;
@@ -50,6 +53,9 @@ html body header .simpl nav a {
 html body header .simpl nav a.download-app {
   margin-right: 24px;
 }
+html body header .welcome {
+  margin-bottom: 12px;
+}
 html body header .welcome .message {
   font-family: "source-sans-pro", Helvetica, sans-serif;
   font-size: 14px;
@@ -60,7 +66,7 @@ html body header .welcome .message {
   letter-spacing: 1px;
   color: #77898a;
   font-weight: 600;
-  font-size: 22px;
+  font-size: 24px;
   color: #4a4a4a;
   margin-bottom: 6px;
 }
@@ -86,6 +92,11 @@ html body header .tabs nav a {
   padding: 14px 0;
   margin-right: 54px;
 }
+@media (max-width: 600px) {
+  html body header .tabs nav a {
+    margin-right: 40px;
+  }
+}
 html body header .tabs nav a.active {
   font-family: "source-sans-pro", Helvetica, sans-serif;
   font-size: 14px;
@@ -99,28 +110,60 @@ html body header .tabs nav a.active {
   color: #344647;
   border-bottom: 2px solid #344647;
 }
+@media (max-width: 600px) {
+  html body header .tabs nav a#transactions {
+    margin-right: 0;
+  }
+}
+@media (max-width: 600px) {
+  html body header .tabs nav a#merchants, html body header .tabs nav a#help {
+    display: none;
+  }
+}
 html body #container {
-  height: 100%;
   background-color: #f7faf9;
   padding: 0 24px;
 }
 html body footer {
-  width: 100%;
-  height: 20%;
-  background-color: #ffffff;
+  background-color: #f2f6f4;
+  font-family: "source-sans-pro", Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  color: #77898a;
 }
-html body .main {
+html body footer .footer-container {
+  padding: 54px 0;
+  max-width: 1070px;
+  margin-left: auto;
+  margin-right: auto;
+}
+html body footer .footer-container .logo {
+  content: url("../assets/images/footer-logo.svg");
+  margin-bottom: 24px;
+}
+html body footer .footer-container .mission {
+  margin-bottom: 24px;
+}
+html body #main {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  max-height: 900px;
+  max-height: 1080px;
+  max-width: 1070px;
+  margin-left: auto;
+  margin-right: auto;
 }
-html body .main .card {
+html body #main .card {
   width: 48%;
   margin-top: 24px;
   margin-right: 24px;
+  margin-bottom: 24px;
 }
-html body .main .card .header {
+html body #main .card .header {
   display: block;
   margin-bottom: 12px;
   font-family: "source-sans-pro", Helvetica, sans-serif;
@@ -133,18 +176,18 @@ html body .main .card .header {
   color: #77898a;
   text-transform: uppercase;
 }
-html body .main .card .content {
+html body #main .card .content {
   background-color: #ffffff;
   box-shadow: 0 2px 10px 0 #efefef;
   padding: 24px;
 }
-html body .main .card.expenditure .content .overview {
+html body #main .card.expenditure .content .overview {
   display: flex;
   justify-content: space-between;
   margin-bottom: 24px;
 }
-html body .main .card.expenditure .content .overview .spent,
-html body .main .card.expenditure .content .overview .limit {
+html body #main .card.expenditure .content .overview .spent,
+html body #main .card.expenditure .content .overview .limit {
   font-family: "source-sans-pro", Helvetica, sans-serif;
   font-size: 14px;
   font-weight: normal;
@@ -154,18 +197,44 @@ html body .main .card.expenditure .content .overview .limit {
   letter-spacing: 1px;
   color: #77898a;
 }
-html body .main .card.expenditure .content .overview .spent label,
-html body .main .card.expenditure .content .overview .limit label {
+html body #main .card.expenditure .content .overview .spent label,
+html body #main .card.expenditure .content .overview .limit label {
   color: #344647;
   font-size: 16px;
 }
-html body .main .card.expenditure .content .overview .spent div,
-html body .main .card.expenditure .content .overview .limit div {
+html body #main .card.expenditure .content .overview .spent div,
+html body #main .card.expenditure .content .overview .limit div {
   color: #344647;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: bold;
 }
-html body .main .card.expenditure .content button {
+html body #main .card.expenditure .content .overview .spent .total-spent,
+html body #main .card.expenditure .content .overview .spent .limit,
+html body #main .card.expenditure .content .overview .limit .total-spent,
+html body #main .card.expenditure .content .overview .limit .limit {
+  display: flex;
+}
+html body #main .card.expenditure .content .overview .spent .total-spent .fa-rupee-sign,
+html body #main .card.expenditure .content .overview .spent .limit .fa-rupee-sign,
+html body #main .card.expenditure .content .overview .limit .total-spent .fa-rupee-sign,
+html body #main .card.expenditure .content .overview .limit .limit .fa-rupee-sign {
+  font-size: 14px;
+  align-self: center;
+  margin-right: 6px;
+}
+html body #main .card.expenditure .content #progressbar {
+  background-color: #e6ebe9;
+  padding: 1px;
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+html body #main .card.expenditure .content #progressbar div {
+  background-image: linear-gradient(to right, #00d1c1, #00d1dc);
+  width: 30%;
+  height: 6px;
+  border-radius: 4px;
+}
+html body #main .card.expenditure .content button {
   width: 100%;
   background-color: #00d1c1;
   padding: 12px;
@@ -185,18 +254,17 @@ html body .main .card.expenditure .content button {
   box-shadow: 0 4px 8px 0 rgba(0, 209, 193, 0.3);
   background-image: linear-gradient(to right, #00d1c1, #00d1dc);
 }
-html body .main .card.expenditure .content button:hover {
+html body #main .card.expenditure .content button:hover {
   background-color: #f7faf9;
   border-color: #f7faf9;
   cursor: pointer !important;
-  color: #77898a;
 }
-html body .main .card.transactions .content .transaction {
+html body #main .card.transactions .content .transaction {
   display: flex;
   justify-content: space-between;
   margin-bottom: 24px;
 }
-html body .main .card.transactions .content .transaction .left {
+html body #main .card.transactions .content .transaction .left {
   font-family: "source-sans-pro", Helvetica, sans-serif;
   font-size: 14px;
   font-weight: normal;
@@ -206,58 +274,27 @@ html body .main .card.transactions .content .transaction .left {
   letter-spacing: 1px;
   color: #77898a;
 }
-html body .main .card.transactions .content .transaction .left .name {
+html body #main .card.transactions .content .transaction .left .name {
   font-size: 16px;
   font-weight: 600;
   color: #344647;
 }
-html body .main .card.transactions .content .see-all {
+html body #main .card.transactions .content .transaction .right .amount {
+  display: flex;
+}
+html body #main .card.transactions .content .transaction .right .amount .fa-rupee-sign {
+  font-size: 12px;
+  align-self: center;
+  margin-right: 6px;
+}
+html body #main .card.transactions .content .see-all {
   color: #00d1c1;
   margin-top: 12px;
 }
-html body .main .card.profile .content .primary .user-icon {
+html body #main .card.profile .content .primary .user-icon {
   content: url("../assets/images/user-icon.svg");
 }
-html body .main .card.profile .content .primary .name {
-  font-family: "source-sans-pro", Helvetica, sans-serif;
-  font-size: 14px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: 1px;
-  color: #77898a;
-  font-size: 20px;
-  color: #344647;
-  font-weight: 600;
-  margin-bottom: 6px;
-}
-html body .main .card.profile .content .primary .score {
-  font-family: "source-sans-pro", Helvetica, sans-serif;
-  font-size: 14px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: 1px;
-  color: #77898a;
-  font-size: 16px;
-  color: #344647;
-  margin-bottom: 24px;
-}
-html body .main .card.profile .content .primary .score .rating {
-  border-radius: 4px;
-  border: solid 1px #77898a;
-  font-size: 14px;
-  margin-left: 6px;
-  padding: 0 3px;
-}
-html body .main .card.profile .content .devices .device {
-  margin-top: 24px;
-}
-html body .main .card.profile .content .devices .mobile {
-  margin-top: 3px;
-  padding-bottom: 24px;
+html body #main .card.profile .content .primary .name {
   font-family: "source-sans-pro", Helvetica, sans-serif;
   font-size: 14px;
   font-weight: normal;
@@ -268,9 +305,54 @@ html body .main .card.profile .content .devices .mobile {
   color: #77898a;
   font-size: 22px;
   color: #344647;
-  font-weight: bold;
+  font-weight: 600;
+  margin-bottom: 6px;
 }
-html body .main .card.profile .content .transactions .title {
+html body #main .card.profile .content .primary .score {
+  font-family: "source-sans-pro", Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  color: #77898a;
+  font-size: 16px;
+  color: #344647;
+  margin-bottom: 24px;
+}
+html body #main .card.profile .content .primary .score .rating {
+  border-radius: 4px;
+  border: solid 1px #77898a;
+  font-size: 14px;
+  margin-left: 6px;
+  padding: 0 3px;
+}
+html body #main .card.profile .content .devices .device {
+  margin-top: 24px;
+}
+html body #main .card.profile .content .devices .mobile {
+  margin-top: 3px;
+  padding-bottom: 24px;
+  font-family: "source-sans-pro", Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  color: #77898a;
+  font-size: 24px;
+  color: #344647;
+  font-weight: bold;
+  display: flex;
+}
+html body #main .card.profile .content .devices .mobile .fa-mobile-alt {
+  font-size: 14px;
+  align-self: center;
+  margin-right: 6px;
+}
+html body #main .card.profile .content .transactions .title {
   margin-top: 24px;
   font-family: "source-sans-pro", Helvetica, sans-serif;
   font-size: 14px;
@@ -283,7 +365,7 @@ html body .main .card.profile .content .transactions .title {
   font-size: 16px;
   color: #344647;
 }
-html body .main .card.profile .content .transactions .transaction-details {
+html body #main .card.profile .content .transactions .transaction-details {
   margin-top: 24px;
   padding-bottom: 24px;
   font-family: "source-sans-pro", Helvetica, sans-serif;
@@ -299,13 +381,32 @@ html body .main .card.profile .content .transactions .transaction-details {
   justify-content: space-between;
   height: 100px;
 }
-html body .main .card.faq .content {
+html body #main .card.merchants .content {
+  display: flex;
+  overflow-x: auto;
+}
+html body #main .card.merchants .content .merchant {
+  margin-right: 12px;
+  text-align: center;
+  font-family: "source-sans-pro", Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  color: #77898a;
+}
+html body #main .card.merchants .content .merchant .name {
+  padding: 24px;
+  border: solid 1px #efefef;
+}
+html body #main .card.faq .content {
   display: flex;
   flex-direction: column;
-  padding-bottom: 0;
 }
-html body .main .card.faq .content a {
-  margin-top: 24px;
+html body #main .card.faq .content a {
+  margin-top: 18px;
   font-family: "source-sans-pro", Helvetica, sans-serif;
   font-size: 14px;
   font-weight: normal;
@@ -316,12 +417,19 @@ html body .main .card.faq .content a {
   color: #77898a;
   color: #00d1c1;
   font-size: 16px;
+  text-decoration: none;
 }
-@media (max-width: 481px) {
-  html body .main {
+html body #main .card.faq .content a:first-child {
+  margin-top: 0;
+}
+html body #main .card.faq .content .seperator {
+  margin-top: 18px;
+}
+@media (max-width: 600px) {
+  html body #main {
     max-height: unset;
   }
-  html body .main .card {
+  html body #main .card {
     width: 100%;
   }
 }

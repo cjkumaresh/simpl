@@ -1,12 +1,17 @@
-.main {
+#main {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    max-height: 900px;
+    max-height: 1080px;
+    max-width: 1070px;
+    margin-left: auto;
+    margin-right: auto;
+
     .card {
         width: 48%;
         margin-top: $spacing-md;
         margin-right: $spacing-md;
+        margin-bottom: $spacing-md;
 
         .header {
             display: block;
@@ -41,6 +46,8 @@
 
         &.merchants {
             .content {
+                display: flex;
+                overflow-x: auto;
                 @import 'merchants';
             }
         }
@@ -49,13 +56,18 @@
             .content {
                 display: flex;
                 flex-direction: column;
-                padding-bottom: 0;
+                // padding-bottom: 0;
+
                 @import 'faq';
             }
         }
     }
 
-    @media (max-width: 481px) {
+    // @media (max-height: 900px) {
+    //     max-height: 900px;
+    // }
+
+    @media (max-width: 600px) {
         max-height: unset;
         .card {
             width: 100%;

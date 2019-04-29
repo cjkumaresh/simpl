@@ -1,7 +1,7 @@
-import { view } from './profile.template.js';
+import { view } from './transactions.template';
 import { Utils } from '../../utils/utils';
 
-export class ProfileComponent {
+export class TransactionsComponent {
     constructor() {
         this.data = {};
     }

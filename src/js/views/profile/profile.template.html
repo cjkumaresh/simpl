@@ -1,1 +1,29 @@
-<section>Profile Page</section>
+<div class="card profile">
+    <label class="header">Profile</label>
+    <div class="content">
+        <div class="primary">
+            <div><img class="user-icon"></img></div>
+            <div class="name">${data.profile.name}</div>
+            <div class="score">
+                Simpl credit score <label class="rating"><strong>${data.profile.score}</strong>/10</label>
+            </div>
+        </div>
+        <div class="seperator"></div>
+        <div class="devices">
+            <div class="device">${data.profile.device}</div>
+            <div class="mobile"><i class="fas fa-mobile-alt"></i>${data.profile.mobile}</div>
+        </div>
+        <div class="seperator"></div>
+        <div class="transactions">
+            <div class="title">Total Transactions</div>
+            <div class="transaction-details">
+                <div>Food: ${data.profile.transactions.food}</div>
+                <div>
+                    Personal Care: ${data.profile.transactions.personalcare}
+                </div>
+                <div>Clothes: ${data.profile.transactions.clothing}</div>
+                <div>Travel: ${data.profile.transactions.travel}</div>
+            </div>
+        </div>
+    </div>
+</div>

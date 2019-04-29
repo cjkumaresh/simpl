@@ -11,6 +11,17 @@
             color: $font-color-grey;
         }
     }
+
+    .right {
+        .amount {
+            display: flex;
+            .fa-rupee-sign {
+                font-size: $font-size-md - 2;
+                align-self: center;
+                margin-right: $spacing-sm / 2;
+            }
+        }
+    }
 }
 
 .see-all {

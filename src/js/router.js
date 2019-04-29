@@ -1,5 +1,10 @@
 import { OverviewComponent } from './views/overview/overview.component';
 import { ProfileComponent } from './views/profile/profile.component';
+import { ExpenditureComponent } from './views/expenditure/expenditure.component';
+import { FaqComponent } from './views/faq/faq.component';
+import { MerchantsComponent } from './views/merchants/merchants.component';
+import { TransactionsComponent } from './views/transactions/transactions.component';
+
 import $ from 'jquery';
 
 export class Router {
@@ -8,10 +13,10 @@ export class Router {
             '': OverviewComponent,
             '#/': OverviewComponent,
             '#/overview': OverviewComponent,
-            '#/transactions': OverviewComponent,
+            '#/transactions': TransactionsComponent,
             '#/profile': ProfileComponent,
-            '#/merchants': OverviewComponent,
-            '#/help': OverviewComponent,
+            '#/merchants': MerchantsComponent,
+            '#/help': FaqComponent,
         };
 
         this.route();
@@ -22,6 +27,14 @@ export class Router {
         window.onpopstate = () => {
             this.navigate();
         };
+
+        $('#nav a').click(e => {
+            const tabs = document.getElementById('nav').getElementsByClassName('header');
+            for (let tab of tabs) {
+                tab.classList.remove('active');
+            }
+            e.currentTarget.classList.add('active');
+        });
     }
 
     navigate() {
@@ -33,7 +46,7 @@ export class Router {
     }
 
     render(component, template, data) {
-        $('#container')
+        $('#main')
             .html('')
             .append(template(component, data));
     }

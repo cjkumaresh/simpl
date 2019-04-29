@@ -1,0 +1,20 @@
+<div class="card transactions">
+    <label class="header">Transactions</label>
+    <div class="content">
+        ${data.transactions.map(transaction => `
+        <div class="transaction ${transaction.type}">
+            <div class="left">
+                <div class="name">${transaction.name}</div>
+                <div class="time">${transaction.time}</div>
+            </div>
+            <div class="right">
+                <div class="amount"><i class="fas fa-rupee-sign"></i>${transaction.amount}</div>
+            </div>
+        </div>
+        ` ).join('')}
+        <div class="seperator"></div>
+        <div class="see-all">
+            <a>See all transactions</a>
+        </div>
+    </div>
+</div>

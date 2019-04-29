@@ -1,0 +1,11 @@
+<div class="card merchants">
+    <label class="header">Merchants We Support</label>
+    <div class="content">
+        ${data.merchants.map(merchant => `
+        <div class="merchant">
+            <div class="name">${merchant.name}</div>
+            <div>${merchant.platform}</div>
+        </div>
+        `).join('')}
+    </div>
+</div>

@@ -1,0 +1,10 @@
+.merchant {
+    margin-right: $spacing-sm;
+    text-align: center;
+    @include font-header();
+
+    .name {
+        padding: $spacing-md;
+        border: solid 1px $grey;
+    }
+}

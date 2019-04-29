@@ -1,0 +1,10 @@
+<div class="card faq">
+    <label class="header">FAQ</label>
+    <div class="content">
+        ${data.faq.map(item => `
+        <a href="#">${item.q}</a>
+        <div class="seperator"></div>
+        `).join('')}
+        <a href>See all questions</a>
+    </div>
+</div>

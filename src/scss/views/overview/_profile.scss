@@ -38,6 +38,12 @@
         font-size: $font-size-lg;
         color: $font-color-grey;
         font-weight: bold;
+        display: flex;
+        .fa-mobile-alt {
+            font-size: $font-size-md;
+            align-self: center;
+            margin-right: $spacing-sm / 2;
+        }
     }
 }
 

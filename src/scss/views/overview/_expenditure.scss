@@ -15,6 +15,29 @@
             font-size: $font-size-lg;
             font-weight: bold;
         }
+
+        .total-spent,
+        .limit {
+            display: flex;
+            .fa-rupee-sign {
+                font-size: $font-size-md;
+                align-self: center;
+                margin-right: $spacing-sm / 2;
+            }
+        }
+    }
+}
+#progressbar {
+    background-color: $very-light;
+    padding: 1px;
+    border-radius: $spacing-sm/3;
+    margin-bottom: $spacing-md;
+
+    div {
+        background-image: linear-gradient(to right, $primary, $secondary);
+        width: 30%;
+        height: $spacing-sm/2;
+        border-radius: $spacing-sm/3;
     }
 }
 button {

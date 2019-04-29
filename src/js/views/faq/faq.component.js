@@ -1,7 +1,7 @@
-import { view } from './profile.template.js';
+import { view } from './faq.template';
 import { Utils } from '../../utils/utils';
 
-export class ProfileComponent {
+export class FaqComponent {
     constructor() {
         this.data = {};
     }

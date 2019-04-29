@@ -7,6 +7,9 @@ header {
     padding: 0 $spacing-md;
     display: flex;
     flex-direction: column;
+    max-width: 1070px;
+    margin-left: auto;
+    margin-right: auto;
 
     .simpl {
         display: flex;
@@ -34,6 +37,7 @@ header {
     }
 
     .welcome {
+        margin-bottom: $spacing-sm;
         .message {
             @include font-header();
             font-weight: 600;
@@ -58,11 +62,28 @@ header {
                 padding: ($spacing-sm + 2) 0;
                 margin-right: $spacing-bg;
 
+                @media (max-width: 600px) {
+                    margin-right: $spacing-lg + 4;
+                }
+
                 &.active {
                     @include font-header();
                     font-weight: 600;
                     color: $font-color-grey;
                     border-bottom: 2px solid $font-color-grey;
+                }
+
+                &#transactions {
+                    @media (max-width: 600px) {
+                        margin-right: 0;
+                    }
+                }
+
+                &#merchants,
+                &#help {
+                    @media (max-width: 600px) {
+                        display: none;
+                    }
                 }
             }
         }
@@ -70,13 +91,27 @@ header {
 }
 
 #container {
-    height: 100%;
+    // height: 100%;
     background-color: $light;
     padding: 0 $spacing-md;
 }
 
 footer {
-    width: 100%;
-    height: 20%;
-    background-color: $background;
+    background-color: $light-grey;
+
+    @include font-header();
+
+    .footer-container {
+        padding: $spacing-bg 0;
+        max-width: 1070px;
+        margin-left: auto;
+        margin-right: auto;
+        .logo {
+            content: url('../assets/images/footer-logo.svg');
+            margin-bottom: $spacing-md;
+        }
+        .mission {
+            margin-bottom: $spacing-md;
+        }
+    }
 }
