@@ -1,0 +1,60 @@
+.primary {
+    .user-icon {
+        content: url('../assets/images/user-icon.svg');
+    }
+
+    .name {
+        @include font-header();
+        font-size: $font-size-lg - 2;
+        color: $font-color-grey;
+        font-weight: 600;
+        margin-bottom: $spacing-sm/2;
+    }
+
+    .score {
+        @include font-header();
+        font-size: $font-size-md + 2;
+        color: $font-color-grey;
+        margin-bottom: $spacing-md;
+
+        .rating {
+            border-radius: 4px;
+            border: solid 1px $font-color-light;
+            font-size: $font-size-md;
+            margin-left: $spacing-sm / 2;
+            padding: 0 $spacing-sm / 4;
+        }
+    }
+}
+
+.devices {
+    .device {
+        margin-top: $spacing-md;
+    }
+    .mobile {
+        margin-top: $spacing-sm/4;
+        padding-bottom: $spacing-md;
+        @include font-header();
+        font-size: $font-size-lg;
+        color: $font-color-grey;
+        font-weight: bold;
+    }
+}
+
+.transactions {
+    .title {
+        margin-top: $spacing-md;
+        @include font-header();
+        font-size: $font-size-md + 2;
+        color: $font-color-grey;
+    }
+    .transaction-details {
+        margin-top: $spacing-md;
+        padding-bottom: $spacing-md;
+        @include font-header();
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100px;
+    }
+}

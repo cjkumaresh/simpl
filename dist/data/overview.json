@@ -1,0 +1,101 @@
+{
+    "expenditure": {
+        "spent": "750",
+        "limit": "5000"
+    },
+    "transactions": [
+        {
+            "type": "debit",
+            "name": "Faasos",
+            "time": "May 27, 04:25 PM",
+            "amount": "180"
+        },
+        {
+            "type": "debit",
+            "name": "BookMyShow",
+            "time": "May 22, 09:30 PM",
+            "amount": "320"
+        },
+        {
+            "type": "debit",
+            "name": "DocsApp",
+            "time": "May 22, 09:30 PM",
+            "amount": "180"
+        },
+        {
+            "type": "paid",
+            "name": "Simpl",
+            "time": "Jun 10, 01:30 PM",
+            "amount": "180"
+        },
+        {
+            "type": "debit",
+            "name": "HolaChef",
+            "time": "May 17, 02:21 PM",
+            "amount": "380"
+        },
+        {
+            "type": "bill",
+            "amount": 560,
+            "fromt": "1st June 2018",
+            "to": "15th June 2018",
+            "due": "27th June 2018"
+        },
+        {
+            "type": "credit",
+            "name": "Refund",
+            "time": "Apr 15, 10:00 PM",
+            "amount": "180"
+        },
+        {
+            "type": "debit",
+            "name": "Freshmenu",
+            "time": "Apr 15, 09:21 PM",
+            "amount": "180"
+        }
+    ],
+    "profile": {
+        "name": "John Doe",
+        "score": "3.5",
+        "maximum-score": "",
+        "device": "Oneplus 3T",
+        "mobile": "9870763023",
+        "transactions": {
+            "food": "22",
+            "personalcare": "3",
+            "clothing": "5",
+            "travel": "2"
+        }
+    },
+    "merchants": [
+        {
+            "name": "bookmyshow",
+            "platform": "android",
+            "logo": ""
+        },
+        {
+            "name": "freshmenu",
+            "platform": "android ios web",
+            "logo": ""
+        },
+        {
+            "name": "faasos",
+            "platform": "android ios web",
+            "logo": ""
+        },
+        {
+            "name": "zomato",
+            "platform": "ios",
+            "logo": ""
+        }
+    ],
+    "faq": [
+        { "q": "How does Simpl work", "a": "It is very Simple" },
+        {
+            "q": "How is my Spending limit determined",
+            "a": "Based on your credit score"
+        },
+        { "q": "How does Simpl’s billing cycle works?", "a": "Not Sure" },
+        { "q": "See all questions", "a": "" }
+    ]
+}

@@ -1,0 +1,36 @@
+@mixin button() {
+    width: 100%;
+
+    background-color: $primary;
+    padding: $spacing-sm;
+    line-height: 0;
+    // @media (max-width: 1024px) {
+    //     padding: 2px;
+    // }
+    @include font-header();
+    @include upper-case();
+    font-size: $font-size-md + 1;
+    color: white;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0, 209, 193, 0.3);
+    background-image: linear-gradient(to right, $primary, $secondary);
+
+    &:hover {
+        background-color: $light;
+        border-color: $light;
+        cursor: pointer !important;
+        // color: $font-color-light;
+    }
+}
+
+@mixin input() {
+    font-size: $font-size-sm;
+    width: 90%;
+    height: $spacing-md + 6px;
+    border-radius: $spacing-sm / 2;
+    padding: $spacing-sm/4;
+}
+
+@mixin upper-case() {
+    text-transform: uppercase;
+}

@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'source-sans-pro';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../assets/fonts/SourceSansPro-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+$font-stack: 'source-sans-pro', Helvetica, sans-serif;
+
+$font-size-sm: 12px;
+$font-size-md: 14px;
+$font-size-lg: 24px;
+$font-size-xlg: 30px;
+
+$font-color-very-light: #e6ebe9;
+$font-color-light: #77898a;
+$font-color-dark: #4a4a4a;
+$font-color-grey: #344647;
+$font-color-primary: #00d1c1;
+
+@mixin font-header() {
+    font-family: $font-stack;
+    font-size: $font-size-md;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1px;
+    color: $font-color-light;
+}

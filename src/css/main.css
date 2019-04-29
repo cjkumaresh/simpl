@@ -1,0 +1,346 @@
+@font-face {
+  font-family: "source-sans-pro";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../assets/fonts/SourceSansPro-Regular.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+html {
+  height: 100%;
+}
+html body {
+  height: 100%;
+  background-color: #ffffff;
+  font: 100% "source-sans-pro", Helvetica, sans-serif;
+}
+html body header {
+  background-color: #ffffff;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+}
+html body header .simpl {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 0;
+}
+html body header .simpl .logo {
+  content: url("../assets/images/logo.svg");
+}
+html body header .simpl nav {
+  display: flex;
+  align-items: center;
+}
+html body header .simpl nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "source-sans-pro", Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  color: #77898a;
+  color: #77898a;
+}
+html body header .simpl nav a.download-app {
+  margin-right: 24px;
+}
+html body header .welcome .message {
+  font-family: "source-sans-pro", Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  color: #77898a;
+  font-weight: 600;
+  font-size: 22px;
+  color: #4a4a4a;
+  margin-bottom: 6px;
+}
+html body header .welcome .last-transact {
+  font-family: "source-sans-pro", Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  color: #77898a;
+  font-size: 14px;
+  line-height: 1.25;
+}
+html body header .tabs nav {
+  display: flex;
+  align-items: center;
+}
+html body header .tabs nav a {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 14px 0;
+  margin-right: 54px;
+}
+html body header .tabs nav a.active {
+  font-family: "source-sans-pro", Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  color: #77898a;
+  font-weight: 600;
+  color: #344647;
+  border-bottom: 2px solid #344647;
+}
+html body #container {
+  height: 100%;
+  background-color: #f7faf9;
+  padding: 0 24px;
+}
+html body footer {
+  width: 100%;
+  height: 20%;
+  background-color: #ffffff;
+}
+html body .main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 900px;
+}
+html body .main .card {
+  width: 48%;
+  margin-top: 24px;
+  margin-right: 24px;
+}
+html body .main .card .header {
+  display: block;
+  margin-bottom: 12px;
+  font-family: "source-sans-pro", Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  color: #77898a;
+  text-transform: uppercase;
+}
+html body .main .card .content {
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px 0 #efefef;
+  padding: 24px;
+}
+html body .main .card.expenditure .content .overview {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+html body .main .card.expenditure .content .overview .spent,
+html body .main .card.expenditure .content .overview .limit {
+  font-family: "source-sans-pro", Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  color: #77898a;
+}
+html body .main .card.expenditure .content .overview .spent label,
+html body .main .card.expenditure .content .overview .limit label {
+  color: #344647;
+  font-size: 16px;
+}
+html body .main .card.expenditure .content .overview .spent div,
+html body .main .card.expenditure .content .overview .limit div {
+  color: #344647;
+  font-size: 22px;
+  font-weight: bold;
+}
+html body .main .card.expenditure .content button {
+  width: 100%;
+  background-color: #00d1c1;
+  padding: 12px;
+  line-height: 0;
+  font-family: "source-sans-pro", Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  color: #77898a;
+  text-transform: uppercase;
+  font-size: 15px;
+  color: white;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px 0 rgba(0, 209, 193, 0.3);
+  background-image: linear-gradient(to right, #00d1c1, #00d1dc);
+}
+html body .main .card.expenditure .content button:hover {
+  background-color: #f7faf9;
+  border-color: #f7faf9;
+  cursor: pointer !important;
+  color: #77898a;
+}
+html body .main .card.transactions .content .transaction {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+html body .main .card.transactions .content .transaction .left {
+  font-family: "source-sans-pro", Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  color: #77898a;
+}
+html body .main .card.transactions .content .transaction .left .name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #344647;
+}
+html body .main .card.transactions .content .see-all {
+  color: #00d1c1;
+  margin-top: 12px;
+}
+html body .main .card.profile .content .primary .user-icon {
+  content: url("../assets/images/user-icon.svg");
+}
+html body .main .card.profile .content .primary .name {
+  font-family: "source-sans-pro", Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  color: #77898a;
+  font-size: 20px;
+  color: #344647;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+html body .main .card.profile .content .primary .score {
+  font-family: "source-sans-pro", Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  color: #77898a;
+  font-size: 16px;
+  color: #344647;
+  margin-bottom: 24px;
+}
+html body .main .card.profile .content .primary .score .rating {
+  border-radius: 4px;
+  border: solid 1px #77898a;
+  font-size: 14px;
+  margin-left: 6px;
+  padding: 0 3px;
+}
+html body .main .card.profile .content .devices .device {
+  margin-top: 24px;
+}
+html body .main .card.profile .content .devices .mobile {
+  margin-top: 3px;
+  padding-bottom: 24px;
+  font-family: "source-sans-pro", Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  color: #77898a;
+  font-size: 22px;
+  color: #344647;
+  font-weight: bold;
+}
+html body .main .card.profile .content .transactions .title {
+  margin-top: 24px;
+  font-family: "source-sans-pro", Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  color: #77898a;
+  font-size: 16px;
+  color: #344647;
+}
+html body .main .card.profile .content .transactions .transaction-details {
+  margin-top: 24px;
+  padding-bottom: 24px;
+  font-family: "source-sans-pro", Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  color: #77898a;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100px;
+}
+html body .main .card.faq .content {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0;
+}
+html body .main .card.faq .content a {
+  margin-top: 24px;
+  font-family: "source-sans-pro", Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  color: #77898a;
+  color: #00d1c1;
+  font-size: 16px;
+}
+@media (max-width: 481px) {
+  html body .main {
+    max-height: unset;
+  }
+  html body .main .card {
+    width: 100%;
+  }
+}
+html body .seperator {
+  height: 1px;
+  background-color: #e6ebe9;
+}
+html body .uppercase {
+  text-transform: uppercase;
+}
+html body .header {
+  font-family: "source-sans-pro", Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  color: #77898a;
+}
+
+/*# sourceMappingURL=main.css.map */

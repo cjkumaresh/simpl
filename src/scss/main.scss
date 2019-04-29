@@ -1,0 +1,28 @@
+@import './common/config';
+html {
+    height: 100%;
+
+    body {
+        height: 100%;
+        background-color: $background;
+        font: 100% $font-stack;
+
+        @import 'views/layout';
+        @import 'views/overview/overview';
+
+        // custome reusable styling
+
+        .seperator {
+            height: 1px;
+            background-color: $very-light;
+        }
+
+        .uppercase {
+            @include upper-case();
+        }
+
+        .header {
+            @include font-header();
+        }
+    }
+}

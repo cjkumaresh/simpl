@@ -1,0 +1,6 @@
+a {
+    margin-top: $spacing-md;
+    @include font-header();
+    color: $primary;
+    font-size: $font-size-md + 2;
+}

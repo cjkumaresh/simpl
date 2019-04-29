@@ -1,0 +1,64 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 900px;
+    .card {
+        width: 48%;
+        margin-top: $spacing-md;
+        margin-right: $spacing-md;
+
+        .header {
+            display: block;
+            margin-bottom: $spacing-sm;
+            @include font-header();
+            @include upper-case();
+        }
+
+        .content {
+            background-color: $background;
+            box-shadow: 0 2px 10px 0 $grey;
+            padding: $spacing-md;
+        }
+
+        &.expenditure {
+            .content {
+                @import 'expenditure';
+            }
+        }
+
+        &.transactions {
+            .content {
+                @import 'transactions';
+            }
+        }
+
+        &.profile {
+            .content {
+                @import 'profile';
+            }
+        }
+
+        &.merchants {
+            .content {
+                @import 'merchants';
+            }
+        }
+
+        &.faq {
+            .content {
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 0;
+                @import 'faq';
+            }
+        }
+    }
+
+    @media (max-width: 481px) {
+        max-height: unset;
+        .card {
+            width: 100%;
+        }
+    }
+}

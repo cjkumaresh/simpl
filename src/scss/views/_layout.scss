@@ -1,0 +1,82 @@
+header {
+    background-color: $background;
+    // position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    padding: 0 $spacing-md;
+    display: flex;
+    flex-direction: column;
+
+    .simpl {
+        display: flex;
+        justify-content: space-between;
+        padding: $spacing-md 0;
+        .logo {
+            content: url('../assets/images/logo.svg');
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+
+            a {
+                text-decoration: none;
+                text-transform: uppercase;
+                @include font-header();
+                color: $font-color-light;
+
+                &.download-app {
+                    margin-right: $spacing-md;
+                }
+            }
+        }
+    }
+
+    .welcome {
+        .message {
+            @include font-header();
+            font-weight: 600;
+            font-size: $font-size-lg;
+            color: $font-color-dark;
+            margin-bottom: $spacing-sm/2;
+        }
+        .last-transact {
+            @include font-header();
+            font-size: $font-size-md;
+            line-height: 1.25;
+        }
+    }
+
+    .tabs {
+        nav {
+            display: flex;
+            align-items: center;
+            a {
+                @include upper-case();
+                text-decoration: none;
+                padding: ($spacing-sm + 2) 0;
+                margin-right: $spacing-bg;
+
+                &.active {
+                    @include font-header();
+                    font-weight: 600;
+                    color: $font-color-grey;
+                    border-bottom: 2px solid $font-color-grey;
+                }
+            }
+        }
+    }
+}
+
+#container {
+    height: 100%;
+    background-color: $light;
+    padding: 0 $spacing-md;
+}
+
+footer {
+    width: 100%;
+    height: 20%;
+    background-color: $background;
+}

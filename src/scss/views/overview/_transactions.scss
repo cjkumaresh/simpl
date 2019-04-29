@@ -1,0 +1,19 @@
+.transaction {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $spacing-md;
+
+    .left {
+        @include font-header();
+        .name {
+            font-size: $font-size-md + 2;
+            font-weight: 600;
+            color: $font-color-grey;
+        }
+    }
+}
+
+.see-all {
+    color: $font-color-primary;
+    margin-top: $spacing-sm;
+}
