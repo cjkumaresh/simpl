@@ -5,6 +5,7 @@ import { view as merchantsView } from '../merchants/merchants.template';
 import { view as faqView } from '../faq/faq.template';
 import { view as transactionsView } from '../transactions/transactions.template';
 import { Utils } from '../../utils/utils';
+import $ from 'jquery';
 
 export class OverviewComponent {
     constructor() {
@@ -28,5 +29,21 @@ export class OverviewComponent {
         });
     }
 
-    handlers() {}
+    handlers() {
+        // $('.accordion').click(e => {
+        //     console.log(e);
+        const accList = document.querySelectorAll('.accordion');
+
+        for (let i = 0; i < accList.length; i++) {
+            accList[i].addEventListener('click', function(e) {
+                console.log('clicked');
+                const classList = e.currentTarget.nextElementSibling.classList;
+                if (classList.contains('active')) {
+                    classList.remove('active');
+                } else {
+                    classList.add('active');
+                }
+            });
+        }
+    }
 }

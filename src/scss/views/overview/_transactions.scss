@@ -22,6 +22,47 @@
             }
         }
     }
+
+    &.bill {
+        height: $spacing-bg;
+        background-color: $light;
+
+        .left {
+            line-height: 3;
+            display: flex;
+            padding: $spacing-sm/2;
+            &:before {
+                content: url('../assets/images/transaction-icon-bill.svg');
+            }
+            .name {
+                color: $font-color-primary;
+            }
+            .time {
+                display: none;
+            }
+        }
+        .right {
+            display: none;
+        }
+    }
+
+    &.paid {
+        .left {
+            &:before {
+                content: url('../assets/images/transaction-icon-tick.svg');
+                position: absolute;
+                // left: $spacing-lg;
+            }
+            .name,
+            .time {
+                color: $font-color-primary;
+                margin-left: $spacing-bg + 2;
+            }
+        }
+        .right {
+            color: $font-color-primary;
+        }
+    }
 }
 
 .see-all {

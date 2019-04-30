@@ -24,5 +24,9 @@ html {
         .header {
             @include font-header();
         }
+
+        .accordion {
+            cursor: pointer;
+        }
     }
 }

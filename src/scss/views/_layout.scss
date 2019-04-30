@@ -1,3 +1,14 @@
+@mixin make-center() {
+    max-width: 1070px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: 600px) {
+        margin-left: unset;
+        margin-right: unset;
+    }
+}
+
 header {
     background-color: $background;
     // position: fixed;
@@ -7,9 +18,7 @@ header {
     padding: 0 $spacing-md;
     display: flex;
     flex-direction: column;
-    max-width: 1070px;
-    margin-left: auto;
-    margin-right: auto;
+    @include make-center();
 
     .simpl {
         display: flex;
@@ -22,6 +31,27 @@ header {
         nav {
             display: flex;
             align-items: center;
+            .content {
+                display: none;
+            }
+
+            @media (max-width: 600px) {
+                a {
+                    &.menu {
+                        display: block !important;
+                    }
+                    &:not(.menu) {
+                        display: none;
+                    }
+                }
+                .content {
+                    &.active {
+                        display: flex;
+                        width: $spacing-bg * 2;
+                        justify-content: space-evenly;
+                    }
+                }
+            }
 
             a {
                 text-decoration: none;
@@ -31,6 +61,10 @@ header {
 
                 &.download-app {
                     margin-right: $spacing-md;
+                }
+
+                &.menu {
+                    display: none;
                 }
             }
         }
@@ -61,6 +95,7 @@ header {
                 text-decoration: none;
                 padding: ($spacing-sm + 2) 0;
                 margin-right: $spacing-bg;
+                // transition: all 200ms linear;
 
                 @media (max-width: 600px) {
                     margin-right: $spacing-lg + 4;
@@ -98,20 +133,112 @@ header {
 
 footer {
     background-color: $light-grey;
+    padding: 0 $spacing-md;
 
     @include font-header();
 
     .footer-container {
-        padding: $spacing-bg $spacing-md;
-        max-width: 1070px;
-        margin-left: auto;
-        margin-right: auto;
+        padding: $spacing-bg 0;
+        display: flex;
+        justify-content: space-between;
+        @include make-center();
         .logo {
             content: url('../assets/images/footer-logo.svg');
             margin-bottom: $spacing-md;
         }
         .mission {
             margin-bottom: $spacing-md;
+        }
+
+        div {
+            &.footer-1 {
+                width: 40%;
+                @media (max-width: 600px) {
+                    width: 100%;
+                    margin-top: $spacing-md;
+                }
+            }
+
+            &:not(.footer-1) {
+                display: flex;
+                flex-direction: column;
+                font-size: $font-size-md + 2;
+
+                .title {
+                    margin: $spacing-sm 0;
+                    @media (max-width: 600px) {
+                        display: none;
+                    }
+
+                    &.accordion {
+                        display: none;
+                        @media (max-width: 600px) {
+                            display: block;
+                            .down-icon {
+                                content: url('../assets/images/medium.svg');
+                            }
+                        }
+                    }
+                }
+
+                .content {
+                    display: flex;
+                    justify-content: space-between;
+                    height: 100%;
+                    transition: all 200ms linear;
+
+                    &.active {
+                        display: block !important;
+                        opacity: 1;
+                        height: auto !important;
+                    }
+
+                    div {
+                        margin-bottom: $spacing-md;
+                    }
+                }
+
+                .seperator {
+                    display: none;
+                    @media (max-width: 600px) {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 600px) {
+            flex-direction: column-reverse;
+
+            div {
+                .content {
+                    // display: none !important;
+                    height: 0 !important;
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+    .address {
+        @include font-header();
+        @include make-center();
+        padding: $spacing-md 0;
+        font-size: $font-size-sm - 2;
+        // width: $spacing-xlg * 10;
+        @media (max-width: 600px) {
+            display: none;
+        }
+    }
+
+    .trademarks {
+        @include font-header();
+        @include make-center();
+        padding: $spacing-bg 0;
+        font-size: $font-size-sm - 2;
+        // width: $spacing-bg * 10;
+        @media (max-width: 600px) {
+            display: none;
         }
     }
 }

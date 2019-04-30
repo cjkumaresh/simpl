@@ -2,9 +2,13 @@
     <label class="header">FAQ</label>
     <div class="content">
         ${data.faq.map(item => `
-        <a href="#">${item.q}</a>
+        <a class="accordion"><img class="link-icon" />${item.q}</a>
+        <div class="content">
+            ${item.a}
+        </div>
         <div class="seperator"></div>
         `).join('')}
+
         <a href>See all questions</a>
     </div>
 </div>

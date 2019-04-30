@@ -9,6 +9,21 @@ a {
     text-decoration: none;
 }
 
+.content {
+    display: none;
+
+    &.active {
+        display: block;
+        padding: $spacing-md 0 0;
+        box-shadow: unset;
+        @include font-header();
+    }
+
+    .link-icon {
+        content: url('../assets/images/link-icon.svg');
+    }
+}
+
 .seperator {
     margin-top: $spacing-sm + 6;
 }
